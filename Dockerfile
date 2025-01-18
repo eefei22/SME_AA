@@ -1,14 +1,17 @@
-# Use an official Nginx image as the base
+#Nginx image as the base
 FROM nginx:alpine
 
-# Set the working directory in the container
+#working directory
 WORKDIR /usr/share/nginx/html
 
-# Copy the project files to the container
+#copy project files to the container
 COPY . /usr/share/nginx/html
 
-# Expose port 80 for the web server
+#port 80 for the web server
 EXPOSE 80
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
+
+# Link to repository 
+# https://github.com/eefei22/SME_AA.git
